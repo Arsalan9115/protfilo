@@ -1,0 +1,1 @@
+export default function Footer(){return(<footer className="py-12 border-t border-white/5 text-center text-zinc-600 text-xs">� 2026 ARSALAN.BEST � Ahmedabad � Built with Next.js 15</footer>)}

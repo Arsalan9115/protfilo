@@ -1,0 +1,2 @@
+import { NextResponse } from 'next/server'; import { projects } from '@/lib/data';
+export async function GET(){ return NextResponse.json({success:true,count:projects.length,data:projects}); }

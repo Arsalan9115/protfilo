@@ -1,0 +1,1 @@
+export const projects=[{id:'01',title:'Hotel Booking Platform',desc:'6 Pages Bootstrap MySQL - Hotel management',tech:['HTML','MySQL','Bootstrap']},{id:'02',title:'Smart Dustbin IoT',desc:'Arduino UNO Ultrasonic Servo C++',tech:['Arduino','C++','IoT']},{id:'03',title:'YouTube Clone',desc:'Internship @ Elevance Skill Jan-Mar 2025',tech:['HTML5','CSS3','JS']}]

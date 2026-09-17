@@ -1,0 +1,2 @@
+import { services } from "@/lib/data"
+export default function Services(){return(<section id="services" className="py-24 max-w-6xl mx-auto px-4"><h2 className="text-4xl font-bold tracking-tighter mb-10">Services</h2><div className="grid md:grid-cols-3 gap-4">{services.map(s=><div key={s.title} className="rounded-[24px] border border-white/10 bg-white/[0.02] p-8"><h3 className="font-semibold text-lg">{s.title}</h3><p className="text-zinc-400 text-sm mt-3">{s.desc}</p></div>)}</div></section>)}

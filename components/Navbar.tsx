@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function Navbar(){return <nav className="flex justify-between items-center max-w-[1200px] mx-auto px-6 py-5"><div className="font-black"><span className="text-violet-500">{"<"}</span>arsalan.best<span className="text-violet-500">/{">"}</span></div><div className="flex gap-4 text-[12px] bg-[#111] border border-white/10 px-4 py-2 rounded-full"><Link href="/">home</Link><Link href="/projects">projects</Link><Link href="/resume">resume</Link><Link href="/contact">contact</Link></div></nav>}

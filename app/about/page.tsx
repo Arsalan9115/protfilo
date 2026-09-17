@@ -1,0 +1,1 @@
+export default function P(){return <main className="p-10 max-w-[1000px] mx-auto"><h1 className="text-3xl font-black">Frontend + Backend = Full Stack</h1><p className="text-zinc-400 mt-3">Frontend React se UI, Backend /api/* se logic. Dono alag files me.</p></main>}

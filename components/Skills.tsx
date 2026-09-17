@@ -1,0 +1,2 @@
+import { skills } from "@/lib/data"
+export default function Skills(){return(<section className="py-6 max-w-6xl mx-auto px-4"><div className="flex flex-wrap gap-2">{skills.map(s=><span key={s} className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium">{s}</span>)}</div></section>)}
