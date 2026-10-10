@@ -21,6 +21,15 @@ export default function SmartDustbinPage() {
             An IoT-based automatic waste bin built with ESP32 and Ultrasonic Sensor.
             It detects waste level, opens the lid automatically, and sends live data to the cloud.
           </p>
+
+          <div className="flex flex-wrap gap-3 mt-6">
+            <a href="/projects/smart-dustbin.mp4" target="_blank" rel="noreferrer" className="h-[44px] px-7 rounded-full bg-white text-black font-bold text-[13px] flex items-center gap-2">
+              🚀 Live Demo
+            </a>
+            <a href="https://github.com/Arsalan9115" target="_blank" rel="noreferrer" className="h-[44px] px-7 rounded-full bg-white/[0.08] border border-white/10 font-bold text-[13px] flex items-center gap-2">
+              ⭐ GitHub
+            </a>
+          </div>
         </div>
 
         {/* Main Image */}

@@ -1,49 +1,160 @@
 import Link from "next/link";
+
 const projects = [
-  {id:"hotel-booking", title:"Hotel Booking System", icon:"🏨", desc:"Full-stack booking platform with payments, rooms, and admin dashboard.", tech:["React","Node.js","Stripe"]},
-  {id:"smart-dustbin", title:"Smart Waste Monitor", icon:"🗑️", desc:"IoT sensor for waste level monitoring with live dashboard & alerts.", tech:["ESP32","IoT","MQTT"]},
-  {id:"youtube-clone", title:"YouTube Clone", icon:"▶️", desc:"Video streaming clone with uploads, comments, and responsive UI.", tech:["Next.js","PostgreSQL","Tailwind"]},
+  {
+    id: "hotel-booking",
+    title: "Hotel Booking System",
+    icon: "🏨",
+    desc: "Full-stack booking platform with payments, rooms, and admin dashboard.",
+    tech: ["React", "Node.js", "Stripe"]
+  },
+  {
+    id: "smart-dustbin",
+    title: "Smart Waste Monitor",
+    icon: "🗑️",
+    desc: "IoT sensor for waste level monitoring with live dashboard & alerts.",
+    tech: ["ESP32", "IoT", "MQTT"]
+  },
+  {
+    id: "myntra-clone",
+    title: "Myntra Clone",
+    icon: "🛍️",
+    desc: "Fashion storefront with responsive shopping experience and product cards.",
+    tech: ["React", "Tailwind", "E-commerce"]
+  },
+  {
+    id: "youtube-clone",
+    title: "YouTube Clone",
+    icon: "▶️",
+    desc: "Video streaming clone with uploads, comments, and responsive UI.",
+    tech: ["Next.js", "PostgreSQL", "Tailwind"]
+  }
 ];
 
-export default function Home(){
-return(
-<div className="min-h-screen bg-[#08080a] p-4 md:p-6 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:80px_80px]">
-<div className="max-w-[1160px] mx-auto rounded-[24px] border border-white/[0.07] bg-[#0c0c0f]/90 shadow-2xl overflow-hidden">
+const credentials = [
+  {
+    type: "Experience",
+    title: "Virtual Internship Offer Letter",
+    organization: "SYNTECXHUB",
+    date: "Oct 2026",
+    link: "/certificates/view/syntecxhub-internship-offer.png"
+  },
+  {
+    type: "Certificate",
+    title: "Full Stack Web Dev",
+    organization: "Elevance Skills",
+    date: "2025",
+    link: "/certificates/view/elevance-fullstack.jpg"
+  },
+  {
+    type: "Experience",
+    title: "Experience Letter",
+    organization: "Elevance Skills",
+    date: "2025",
+    link: "/certificates/view/elevance-experience-letter.jpg"
+  }
+];
 
-<div className="m-3 md:m-4 rounded-[16px] bg-[#121214] border border-white/[0.05] px-5 h-[56px] flex justify-between items-center">
-<div className="w-9 h-9 rounded-[12px] bg-[#e9e5ff] text-[#7c5cff] grid place-items-center font-black text-[14px]">AB</div>
-<div className="flex gap-2">
-<Link href="/" className="px-5 py-2 rounded-full bg-[#7c5cff] text-white text-[13px] font-bold">Home</Link>
-<Link href="/projects" className="px-5 py-2 rounded-full bg-[#242428] text-zinc-400 text-[13px]">Projects</Link>
-<Link href="/resume" className="px-5 py-2 rounded-full bg-[#2e2e32] text-zinc-300 text-[13px]">Resume</Link>
-<Link href="/freelance" className="px-5 py-2 rounded-full bg-[#2e2e32] text-zinc-300 text-[13px]">Freelance</Link>
-<Link href="/contact" className="px-5 py-2 rounded-full bg-[#7c5cff] text-white text-[13px] font-bold">Hire Me</Link>
-</div></div>
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-[#08080a] px-4 pb-10 text-white md:px-6">
+      <div className="mx-auto max-w-[1120px]">
+        <section className="px-4 pb-12 pt-12 text-center md:pb-16 md:pt-16">
+          <div className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full border border-white/10 bg-[#16161a] px-4 py-2 text-xs text-[#b6f0b0]">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-[#b6f0b0]" aria-hidden="true" />
+            <span>Available for freelance</span>
+            <span className="text-white/30" aria-hidden="true">•</span>
+            <span>Open to work</span>
+          </div>
+          <h1 className="mt-7 text-4xl font-black leading-tight tracking-[-0.06em] sm:text-5xl md:text-6xl">
+            Arsalan Botawala
+          </h1>
+          <p className="mt-3 text-lg font-semibold text-zinc-200 sm:text-xl">
+            Full Stack Developer &amp; <span className="text-[#a996ff]">IoT Builder</span>
+          </p>
+          <p className="mx-auto mt-3 max-w-[620px] text-sm leading-6 text-zinc-400">
+            I build scalable web apps, IoT systems, and modern UI.
+          </p>
+          <div className="mt-7 flex flex-wrap justify-center gap-3">
+            <Link href="/projects" className="rounded-xl bg-[#7c5cff] px-5 py-3 text-sm font-bold text-white shadow-[0_12px_24px_rgba(124,92,255,0.25)] transition hover:-translate-y-0.5">
+              ✨ View Projects
+            </Link>
+            <Link href="/resume" className="rounded-xl border border-white/10 bg-[#1a1a1e] px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:border-white/20">
+              View Resume ↗
+            </Link>
+            <Link href="/certificates" className="rounded-xl border border-white/10 bg-[#1a1a1e] px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:border-white/20">
+              🏆 Certs
+            </Link>
+          </div>
+        </section>
 
-<div className="text-center px-6 pt-10 pb-8">
-<div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#16161a] px-3 py-1 text-[12px] text-[#b6f0b0]"><span className="w-2 h-2 bg-[#b6f0b0] rounded-full animate-pulse"></span>Available for freelance</div>
-<h1 className="mt-6 text-[52px] md:text-[64px] font-black leading-[0.9] tracking-tighter">Arsalan Botawala<br/><span className="text-white font-bold">Full Stack Developer & </span><span className="text-[#8b75ff]">IoT Builder</span></h1>
-<p className="mt-4 max-w-[700px] mx-auto text-[13.5px] text-zinc-400 leading-relaxed">I design and build scalable web applications, IoT systems, and modern digital experiences. Turning ideas into real-world products with clean code and practical engineering.</p>
-<div className="mt-7 flex justify-center gap-3">
-<Link href="/projects" className="px-6 py-3 rounded-[12px] bg-[#7c5cff] text-white text-[14px] font-bold">✨ View Projects</Link>
-<Link href="/resume" className="px-6 py-3 rounded-[12px] border border-white/10 bg-[#1a1a1e] text-white text-[14px] font-bold">⬇ Download Resume</Link>
-</div></div>
+        <section className="border-t border-white/[0.07] px-1 py-8 md:px-2">
+          <div className="flex items-center justify-between gap-4">
+            <h2 className="text-xl font-black tracking-tight md:text-2xl">Selected Projects</h2>
+            <Link href="/projects" className="shrink-0 text-sm font-semibold text-zinc-400 transition hover:text-white">
+              View All <span aria-hidden="true">→</span>
+            </Link>
+          </div>
 
-<div className="px-7 pb-8">
-<div className="flex items-center gap-3"><div className="font-black text-[20px] tracking-tight">Selected Projects</div><div className="text-[13px] text-zinc-500">— A few things I've built recently</div></div>
-<div className="mt-5 grid md:grid-cols-3 gap-4">
-{projects.map(p=>(
-<Link key={p.id} href={`/projects/${p.id}`} className="group rounded-[16px] border border-white/[0.07] bg-[#15151a] p-6 hover:border-[#7c5cff]/50 transition">
-<div className="w-10 h-10 rounded-[12px] bg-[#1e1e26] border border-[#7c5cff]/20 grid place-items-center text-[18px]">{p.icon}</div>
-<div className="mt-4 font-bold text-[16px]">{p.title}</div>
-<div className="mt-2 text-[12px] text-zinc-400 leading-relaxed min-h-[36px]">{p.desc}</div>
-<div className="mt-4 flex gap-2 flex-wrap">{p.tech.map(t=><span key={t} className="text-[11px] px-2.5 py-1 rounded-[8px] bg-[#23232a] border border-white/5 text-zinc-300">{t}</span>)}</div>
-<div className="mt-5 h-[2px] w-full bg-[#7c5cff] rounded-full opacity-0 group-hover:opacity-100"></div>
-</Link>))}
-</div>
-<div className="mt-10 grid grid-cols-3 text-center border-t border-white/[0.06] pt-7">
-<div><div className="text-[30px] font-black text-[#8b75ff]">10+</div><div className="text-[13px] text-zinc-500">Projects</div></div>
-<div className="border-x border-white/[0.06]"><div className="text-[30px] font-black text-[#8b75ff]">3+</div><div className="text-[13px] text-zinc-500">IoT</div></div>
-<div><div className="text-[30px] font-black text-[#8b75ff]">2+</div><div className="text-[13px] text-zinc-500">Experience</div></div>
-</div></div></div></div>
-)}
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            {projects.map((p) => (
+              <Link
+                key={p.id}
+                href={`/projects/${p.id}`}
+                className="group rounded-2xl border border-white/[0.08] bg-[#111114] p-5 transition duration-200 hover:-translate-y-0.5 hover:border-[#7c5cff]/50 hover:bg-[#141418]"
+              >
+                <div className="flex items-start gap-3">
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-white/[0.08] bg-[#1a1a20] text-lg" aria-hidden="true">
+                    {p.icon}
+                  </span>
+                  <div>
+                    <h3 className="font-bold text-white group-hover:text-[#c4b8ff]">{p.title}</h3>
+                    <p className="mt-1 text-xs leading-5 text-zinc-400">{p.desc}</p>
+                  </div>
+                </div>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {p.tech.map((t) => (
+                    <span key={t} className="rounded-md border border-white/[0.06] bg-[#1a1a20] px-2.5 py-1 text-[11px] text-zinc-300">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="border-t border-white/[0.07] px-1 py-8 md:px-2">
+          <div className="flex items-center justify-between gap-4">
+            <h2 className="text-xl font-black tracking-tight md:text-2xl">🏆 Featured Credentials</h2>
+            <Link href="/certificates" className="shrink-0 text-sm font-semibold text-zinc-400 transition hover:text-white">
+              View All <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+
+          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {credentials.map((credential) => (
+              <article key={credential.title} className="rounded-2xl border border-white/[0.08] bg-[#111114] p-5 transition hover:border-white/15">
+                <span className="inline-flex rounded-md border border-[#7c5cff]/20 bg-[#7c5cff]/10 px-2 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[#b9aaff]">
+                  {credential.type}
+                </span>
+                <h3 className="mt-4 font-bold text-white">{credential.title}</h3>
+                <p className="mt-1 text-xs text-zinc-400">
+                  {credential.organization} <span className="text-zinc-600">({credential.date})</span>
+                </p>
+                <a
+                  href={credential.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-flex text-xs font-semibold text-[#b9aaff] transition hover:text-white"
+                >
+                  Verify{credential.type === "Experience" ? " Letter" : ""} <span className="ml-1" aria-hidden="true">↗</span>
+                </a>
+              </article>
+            ))}
+          </div>
+        </section>
+      </div>
+    </main>
+  );
+}

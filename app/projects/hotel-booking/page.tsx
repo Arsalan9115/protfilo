@@ -3,6 +3,9 @@
 import Link from "next/link";
 
 export default function HotelBookingPage() {
+  const LIVE_LINK = "https://hotel-website-ashy-eight.vercel.app/";
+  const GITHUB_LINK = "https://github.com/Arsalan9115/hotel-website.git";
+
   return (
     <div className="min-h-screen bg-[#070708] text-white">
       <div className="max-w-[760px] mx-auto px-6 py-10">
@@ -22,24 +25,52 @@ export default function HotelBookingPage() {
           <p className="text-[14px] text-white/50 mt-3 max-w-[560px] leading-6">
             A full-stack hotel booking platform with real-time room availability, secure payments, and admin dashboard.
           </p>
+
+          <div className="flex flex-wrap gap-3 mt-6">
+            <a href={LIVE_LINK} target="_blank" rel="noreferrer" className="h-[44px] px-7 rounded-full bg-white text-black font-bold text-[13px] flex items-center gap-2">
+              🚀 Live Demo
+            </a>
+            <a href={GITHUB_LINK} target="_blank" rel="noreferrer" className="h-[44px] px-7 rounded-full bg-white/[0.08] border border-white/10 font-bold text-[13px] flex items-center gap-2">
+              ⭐ GitHub
+            </a>
+          </div>
         </div>
 
         <div className="mt-8 rounded-[28px] overflow-hidden border border-white/[0.08] bg-[#121214] p-2">
-          <div className="rounded-[20px] overflow-hidden bg-black h-[420px]">
+          <div className="rounded-[20px] overflow-hidden bg-[#0d0d10]">
             <img
-              src="/projects/hotel-booking.png"
-              alt="Hotel Booking"
-              className="w-full h-full object-cover"
+              src="/projects/hotel-booking-live.png"
+              alt="Hotel Booking project preview"
+              className="w-full h-auto object-cover"
             />
           </div>
           <div className="flex items-center justify-between px-4 py-3">
-            <p className="text-[11px] text-white/40">Version 2.0 • Live Soon</p>
+            <p className="text-[11px] text-white/40">Live Demo • Travel platform</p>
             <div className="flex gap-2">
-              {["React","Node.js","MongoDB","Stripe"].map(t=>(
+              {["React","Node.js","MongoDB","Stripe"].map((t) => (
                 <span key={t} className="px-2.5 py-1 rounded-full bg-white/[0.06] border border-white/10 text-[10px] text-white/60">{t}</span>
               ))}
             </div>
           </div>
+        </div>
+
+        <div className="mt-4 grid md:grid-cols-2 gap-4">
+          <figure className="rounded-[22px] overflow-hidden border border-white/[0.08] bg-[#121214] p-2">
+            <img
+              src="/projects/hotel-booking-live-3.png"
+              alt="Garden Retreat room from the live hotel booking website"
+              className="w-full h-auto rounded-[16px]"
+            />
+            <figcaption className="px-3 py-2 text-[11px] text-white/45">Garden Retreat</figcaption>
+          </figure>
+          <figure className="rounded-[22px] overflow-hidden border border-white/[0.08] bg-[#121214] p-2">
+            <img
+              src="/projects/hotel-booking-live-2.png"
+              alt="Guest gallery from the live hotel booking website"
+              className="w-full h-auto rounded-[16px]"
+            />
+            <figcaption className="px-3 py-2 text-[11px] text-white/45">Guest Gallery</figcaption>
+          </figure>
         </div>
 
         <div className="mt-6 grid md:grid-cols-2 gap-6">
@@ -52,9 +83,9 @@ export default function HotelBookingPage() {
                 "Secure booking with Stripe payment",
                 "User dashboard with booking history",
                 "Admin panel to manage hotels & bookings"
-              ].map((item,i)=>(
+              ].map((item, i) => (
                 <li key={i} className="flex gap-3 text-[13px] text-white/60">
-                  <span className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-[10px] text-white">{i+1}</span>
+                  <span className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-[10px] text-white">{i + 1}</span>
                   {item}
                 </li>
               ))}
@@ -64,14 +95,10 @@ export default function HotelBookingPage() {
             <div>
               <h3 className="text-[13px] font-bold tracking-wide">TECH STACK</h3>
               <div className="flex flex-wrap gap-2 mt-4">
-                {["Next.js","TypeScript","Node.js","Express","MongoDB","Tailwind CSS","Stripe","JWT Auth"].map(t=>(
+                {["Next.js","TypeScript","Node.js","Express","MongoDB","Tailwind CSS","Stripe","JWT Auth"].map((t) => (
                   <span key={t} className="px-3 py-1.5 rounded-full bg-white/[0.06] border border-white/10 text-[11px] text-white/70">{t}</span>
                 ))}
               </div>
-            </div>
-            <div className="mt-6 flex gap-3">
-              <a href="#" className="flex-1 h-10 rounded-full bg-white text-black text-[13px] font-bold flex items-center justify-center">Live Demo</a>
-              <a href="#" className="flex-1 h-10 rounded-full bg-white/10 border border-white/10 text-[13px] font-bold flex items-center justify-center">GitHub</a>
             </div>
           </div>
         </div>

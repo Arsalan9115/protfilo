@@ -40,12 +40,12 @@ export default function Contact() {
         </Link>
 
         <h1 className="text-[28px] font-bold mt-6">~/contact</h1>
-        <p className="text-[12px] text-white/30 mt-1">Got an idea or a role in mind? Let's talk.</p>
+        <p className="text-[12px] text-white/30 mt-1">Got an idea or a role in mind? Let&apos;s talk.</p>
 
         <div className="grid md:grid-cols-2 gap-6 mt-8">
           {/* Left */}
           <div className="rounded-[16px] border border-white/10 bg-[#0f0f11] p-6 h-fit">
-            <h3 className="font-semibold text-[15px]">Let's Talk</h3>
+            <h3 className="font-semibold text-[15px]">Let&apos;s Talk</h3>
             <p className="text-[13px] text-white/40 mt-2">Have a project? Freelance work? Job opportunity?</p>
             <div className="mt-6 space-y-3 text-[13px] text-white/70">
               <div>📍 Ahmedabad, Gujarat</div>
@@ -65,7 +65,7 @@ export default function Contact() {
               value={form.name}
               onChange={e=>setForm({...form, name:e.target.value})}
               placeholder="Your Name"
-              className="w-full h-10 rounded-lg bg-black border border-white/10 px-3 text-[13px] text-white placeholder:text-white/30 outline-none focus:border-white/20"
+              className="w-full h-10 rounded-lg bg-black border border-white/10 px-3 text-[13px] text-gray-200 placeholder:text-zinc-400 outline-none focus:border-white/20"
             />
             <input
               required
@@ -73,12 +73,12 @@ export default function Contact() {
               value={form.email}
               onChange={e=>setForm({...form, email:e.target.value})}
               placeholder="Your Email"
-              className="w-full h-10 rounded-lg bg-black border border-white/10 px-3 text-[13px] text-white placeholder:text-white/30 outline-none focus:border-white/20"
+              className="w-full h-10 rounded-lg bg-black border border-white/10 px-3 text-[13px] text-gray-200 placeholder:text-zinc-400 outline-none focus:border-white/20"
             />
             <select
               value={form.service}
               onChange={e=>setForm({...form, service:e.target.value})}
-              className="w-full h-10 rounded-lg bg-black border border-white/10 px-3 text-[13px] text-white outline-none"
+              className="w-full h-10 rounded-lg bg-black border border-white/10 px-3 text-[13px] text-gray-200 outline-none"
             >
               <option>Website Development</option>
               <option>Freelance Work</option>
@@ -89,10 +89,10 @@ export default function Contact() {
               value={form.message}
               onChange={e=>setForm({...form, message:e.target.value})}
               placeholder="Tell me about your project..."
-              className="w-full h-28 rounded-lg bg-black border border-white/10 p-3 text-[13px] text-white placeholder:text-white/30 outline-none focus:border-white/20 resize-none"
+              className="w-full h-28 rounded-lg bg-black border border-white/10 p-3 text-[13px] text-gray-200 placeholder:text-zinc-400 outline-none focus:border-white/20 resize-none"
             />
-            <button type="submit" className="w-full h-11 rounded-lg bg-white text-black font-bold text-[13px] hover:bg-zinc-200 transition">
-              Send Message →
+            <button type="submit" className="w-full rounded-lg bg-white px-6 py-3 text-[13px] font-bold text-black transition hover:bg-zinc-200">
+              Send Message <span className="ml-2">→</span>
             </button>
             {status && <p className="text-center text-[12px] text-zinc-400">{status}</p>}
           </form>

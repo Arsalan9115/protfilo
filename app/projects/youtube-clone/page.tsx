@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Page() {
   const LIVE_LINK = "https://youtube-clone-b32d-self.vercel.app/";
   const GITHUB_LINK = "https://github.com/Arsalan9115/youtube-clone";
@@ -7,8 +9,11 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-[#08080a] text-white">
       <div className="max-w-[1100px] mx-auto px-6 py-10">
+        <Link href="/projects" className="inline-flex items-center gap-2 text-[13px] text-white/40 hover:text-white/80 transition">
+          <span>←</span> Back to Projects
+        </Link>
 
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1a1a1e] border border-white/10 text-[11px] text-white/60">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1a1a1e] border border-white/10 text-[11px] text-white/60 mt-6">
           <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" /> LIVE PROJECT • 2025
         </div>
 
@@ -21,17 +26,17 @@ export default function Page() {
         </p>
 
         <div className="flex gap-3 mt-6">
-          <a href={LIVE_LINK} target="_blank" className="h-[44px] px-7 rounded-full bg-white text-black font-bold text-[13px] flex items-center gap-1.5">
+          <a href={LIVE_LINK} target="_blank" rel="noreferrer" className="h-[44px] px-7 rounded-full bg-white text-black font-bold text-[13px] flex items-center gap-1.5">
             🚀 Live Demo ↗
           </a>
-          <a href={GITHUB_LINK} target="_blank" className="h-[44px] px-7 rounded-full bg-white/[0.08] border border-white/10 font-bold text-[13px] flex items-center gap-2">
+          <a href={GITHUB_LINK} target="_blank" rel="noreferrer" className="h-[44px] px-7 rounded-full bg-white/[0.08] border border-white/10 font-bold text-[13px] flex items-center gap-2">
             ⭐ GitHub
           </a>
         </div>
 
         <div className="mt-10 rounded-[20px] border border-white/[0.08] bg-[#121214] p-[8px]">
           <div className="rounded-[12px] overflow-hidden bg-black">
-            <img src="/projects/youtube-clone.png" alt="Feed" className="w-full h-auto object-contain" />
+            <img src="/projects/youtube-clone-live.png" alt="YouTube Clone live website preview" className="w-full h-auto object-contain" />
           </div>
         </div>
 
