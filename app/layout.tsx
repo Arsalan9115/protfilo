@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Arsalan Botawala | Full Stack Developer & IoT Builder",
@@ -29,6 +30,7 @@ export default function RootLayout({
         <footer className="text-center text-[10px] text-zinc-600 py-10 border-t border-white/5 mt-10">
           FRONTEND + BACKEND • Next.js API Routes • arsalanbotawala256@gmail.com
         </footer>
+        <Analytics />
       </body>
     </html>
   );
